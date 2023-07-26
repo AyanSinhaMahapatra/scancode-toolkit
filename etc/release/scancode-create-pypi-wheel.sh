@@ -24,7 +24,7 @@ python_tag=$( python -c "import platform;print(f\"cp{''.join(platform.python_ver
 
 venv/bin/python setup.py --quiet bdist_wheel --python-tag $python_tag
 
-rm -rf build .eggs src/scancode_toolkit*.egg-info src/scancode_toolkit_mini*.egg-info
+rm -rf build .eggs src/scancode_toolkit_test*.egg-info src/scancode_toolkit_test_mini*.egg-info
 cp setup.cfg setup-main.cfg
 cp setup-mini.cfg setup.cfg
 

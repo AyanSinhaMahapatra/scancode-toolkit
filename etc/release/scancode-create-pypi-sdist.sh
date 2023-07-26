@@ -19,7 +19,7 @@ set -e
 ./configure --dev
 venv/bin/python setup.py --quiet sdist
 
-rm -rf build .eggs src/scancode_toolkit*.egg-info src/scancode_toolkit_mini*.egg-info
+rm -rf build .eggs src/scancode_toolkit_test*.egg-info src/scancode_toolkit_test_mini*.egg-info
 cp setup.cfg setup-main.cfg
 cp setup-mini.cfg setup.cfg
 
