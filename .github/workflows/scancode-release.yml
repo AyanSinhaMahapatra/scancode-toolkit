@@ -284,7 +284,7 @@ jobs:
             done
           for f in `find dist -type f -name "scancode_toolkit_mini-*.whl"`; \
             do \
-              venv/bin/python -m pip install --force-reinstall "$f[full]" ; \
+              venv/bin/python -m pip install --find-links=./etc/thirdparty/dummy_dist --force-reinstall "$f[full]" ; \
               venv/bin/scancode -clipeu --json-pp - some.file ; \
             done
 
