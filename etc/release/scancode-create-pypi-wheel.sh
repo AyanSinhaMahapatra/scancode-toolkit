@@ -23,8 +23,8 @@ venv/bin/scancode-reindex-package-patterns
 venv/bin/scancode-train-gibberish-model
 
 # build code packages
-venv/bin/flot --pyproject pyproject-scancode-toolkit.toml --wheel --sdist
-venv/bin/flot --pyproject pyproject-scancode-toolkit-mini.toml --wheel --sdist
+venv/bin/flot --pyproject pyproject-scancode-toolkit.toml --wheel
+venv/bin/flot --pyproject pyproject-scancode-toolkit-mini.toml --wheel
 
 venv/bin/twine check dist/*
 
