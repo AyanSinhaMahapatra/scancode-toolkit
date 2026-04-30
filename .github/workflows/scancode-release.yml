@@ -271,7 +271,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [macos-14, macos-15, macos-14-intel, macos-15-intel]
+        os: [macos-14, macos-15, macos-15-intel]
         pyver: ["3.10", "3.11", "3.12", "3.13", "3.14"]
 
     steps:
@@ -307,7 +307,7 @@ jobs:
             done
           for f in `find dist -type f -name "scancode_toolkit_mini-*.whl"`; \
             do \
-              venv/bin/python -m pip install --find-links=./etc/thirdparty/dummy_dist --force-reinstall "$f[full]" ; \
+              venv/bin/python -m pip install --force-reinstall "$f[full]" ; \
               venv/bin/scancode -clipeu --json-pp - some.file ; \
             done
 
@@ -430,7 +430,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [macos-14, macos-15]
+        os: [macos-14, macos-15, macos-15-intel]
         pyver: ["3.10", "3.11", "3.12", "3.13", "3.14"]
 
     steps:
