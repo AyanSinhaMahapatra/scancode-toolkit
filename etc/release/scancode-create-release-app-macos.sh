@@ -43,7 +43,6 @@ venv/bin/python etc/scripts/fetch_thirdparty.py \
   --wheel-only extractcode-libarchive \
   --wheel-only typecode-libmagic \
   --dest $thirdparty_src_dir \
-  --sdists \
   --use-cached-index
 
 venv/bin/python etc/scripts/fetch_thirdparty.py \
