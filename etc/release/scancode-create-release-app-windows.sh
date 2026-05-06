@@ -36,13 +36,10 @@ mkdir -p $thirdparty_src_dir
 
 venv/bin/python etc/scripts/fetch_thirdparty.py \
   --requirements requirements-native.txt \
-  --wheel-only packagedcode-msitools \
-  --wheel-only rpm-inspector-rpm \
   --wheel-only extractcode-7z \
   --wheel-only extractcode-libarchive \
   --wheel-only typecode-libmagic \
   --dest $thirdparty_src_dir \
-  --sdists \
   --use-cached-index
 
 venv/bin/python etc/scripts/fetch_thirdparty.py \

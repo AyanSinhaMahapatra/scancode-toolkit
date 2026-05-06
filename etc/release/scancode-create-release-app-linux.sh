@@ -44,7 +44,9 @@ venv/bin/python etc/scripts/fetch_thirdparty.py \
   --wheel-only extractcode-libarchive \
   --wheel-only typecode-libmagic \
   --dest $thirdparty_src_dir \
-  --sdists \
+  --operating-system=$operating_system \
+  --python-version=$python_version \
+  --wheels \
   --use-cached-index
 
 venv/bin/python etc/scripts/fetch_thirdparty.py \
