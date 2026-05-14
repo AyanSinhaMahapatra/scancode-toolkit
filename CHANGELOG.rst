@@ -4,7 +4,37 @@ Changelog
 Next release
 --------------
 
-v3.5.0 - 2026-01-15
+
+v33.0.0rc1 - 2026-05-14
+------------------------
+
+This is a major release candidate with major changes in packaging,
+with the licensedcode-data and licensedcode-index being published
+in two seperate wheels. Also adds linux/macos ARM support in
+release archives and pypi wheels.
+
+- Remove the licensedcode data and built license indexes from the
+  main scancode-toolkit built wheel, and release them as
+  seperate wheels which scancode-toolkit depends on.
+  This enables to release scancode licensedb data/index wheels
+  seperately whenever necessary and also reduces the scancode
+  wheel size greatly. For more details see:
+  https://github.com/aboutcode-org/scancode-toolkit/issues/3459
+
+- Add macos ARM and linux arm support in release archives and
+  pypi wheels through ``scancode-toolkit-mini`` which uses
+  system provided libraries instead of bundled binaries.
+  Also use updated non pure-python dependencies supporting
+  linux/macos arm wheels. For more details see:
+  https://github.com/aboutcode-org/scancode-toolkit/issues/3205
+  https://github.com/aboutcode-org/scancode-toolkit/issues/3958
+
+- Add new and updates licenses, and license rules, including
+  support for the SPDX License List 3.28
+  https://github.com/aboutcode-org/scancode-toolkit/pull/4956
+
+
+v32.5.0 - 2026-01-15
 -------------------
 
 - Improve package scan performance by:
