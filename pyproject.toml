@@ -13,7 +13,7 @@ readme = "README.rst"
 license = { text = "Apache-2.0 AND CC-BY-4.0 AND LicenseRef-scancode-other-permissive AND LicenseRef-scancode-other-copyleft" }
 requires-python = ">=3.10"
 authors = [
-    { name = "nexB. Inc. and others", email = "info@aboutcode.org" },
+    { name = "aboutcode.org, nexB. Inc. and others", email = "info@aboutcode.org" },
 ]
 keywords = [
     "open source",
@@ -108,7 +108,7 @@ dependencies = [
 
 
 [project.urls]
-Homepage = "https://github.com/nexB/scancode-toolkit"
+Homepage = "https://github.com/aboutcode-org/scancode-toolkit"
 
 
 [project.optional-dependencies]

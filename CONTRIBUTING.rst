@@ -92,7 +92,7 @@ Development
 
 To set up ScanCode for local development:
 
-1. Fork the scancode-toolkit on GitHub, click `fork <https://github.com/nexb/scancode-toolkit/fork>`_ button
+1. Fork the scancode-toolkit on GitHub, click `fork <https://github.com/aboutcode-org/scancode-toolkit/fork>`_ button
 
 2. Clone your fork locally:
 

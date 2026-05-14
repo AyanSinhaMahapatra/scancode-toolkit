@@ -333,7 +333,7 @@
     },
     {
         "path": "samples/commoncode/commoncode.ABOUT",
-        "holder": "nexB. Inc. and others",
+        "holder": "aboutcode.org, nexB. Inc. and others",
         "start_line": 2,
         "end_line": 2
     },
@@ -793,7 +793,7 @@
     },
     {
         "path": "samples/commoncode/README.rst",
-        "holder": "nexB. Inc. and others",
+        "holder": "aboutcode.org, nexB. Inc. and others",
         "start_line": 5,
         "end_line": 5
     },
@@ -1021,7 +1021,7 @@
     },
     {
         "path": "samples/commoncode/setup.cfg",
-        "author": "nexB. Inc. and others",
+        "author": "aboutcode.org, nexB. Inc. and others",
         "start_line": 10,
         "end_line": 10
     },

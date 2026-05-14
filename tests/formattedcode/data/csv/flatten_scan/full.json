@@ -1306,7 +1306,7 @@
       ],
       "holders": [
         {
-          "holder": "nexB. Inc. and others",
+          "holder": "aboutcode.org, nexB. Inc. and others",
           "start_line": 2,
           "end_line": 2
         }
@@ -2239,7 +2239,7 @@
       ],
       "holders": [
         {
-          "holder": "nexB. Inc. and others",
+          "holder": "aboutcode.org, nexB. Inc. and others",
           "start_line": 5,
           "end_line": 5
         }
@@ -3206,7 +3206,7 @@
       "holders": [],
       "authors": [
         {
-          "author": "nexB. Inc. and others",
+          "author": "aboutcode.org, nexB. Inc. and others",
           "start_line": 10,
           "end_line": 10
         }

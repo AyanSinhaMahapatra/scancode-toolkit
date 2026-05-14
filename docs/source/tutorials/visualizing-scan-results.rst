@@ -3,7 +3,7 @@
 Visualizing scan results
 ========================
 
-To help visualize the scans, we have a dedicated tool `ScanCode workbench <https://github.com/nexb/scancode-workbench/>`_  which is a desktop application that allows you to visualize and explore the results of one or more scans. It is a cross-platform application that runs on Windows, Mac OS X and Linux. It is built using the Electron framework and is built using Electron, Typescript & React
+To help visualize the scans, we have a dedicated tool `ScanCode workbench <https://github.com/aboutcode-org/scancode-workbench/>`_  which is a desktop application that allows you to visualize and explore the results of one or more scans. It is a cross-platform application that runs on Windows, Mac OS X and Linux. It is built using the Electron framework and is built using Electron, Typescript & React
 
 Detailed Installation and Usage guide can be found here -  :ref:`scancode-workbench:getting-started`
 

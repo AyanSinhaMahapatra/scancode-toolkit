@@ -14,7 +14,7 @@
         {
           "type": "person",
           "role": "author",
-          "name": "nexB. Inc. and others",
+          "name": "aboutcode.org, nexB. Inc. and others",
           "email": "info@aboutcode.org",
           "url": null
         }
@@ -129,7 +129,7 @@
             {
               "type": "person",
               "role": "author",
-              "name": "nexB. Inc. and others",
+              "name": "aboutcode.org, nexB. Inc. and others",
               "email": "info@aboutcode.org",
               "url": null
             }

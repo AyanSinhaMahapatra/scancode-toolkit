@@ -614,7 +614,7 @@ class PackageData(IdentifiablePackageData):
 
     vcs_url = String(
         help='a URL to the VCS repository in the SPDX form of: '
-             'https://github.com/nexb/scancode-toolkit.git@405aaa4b3 '
+             'https://github.com/aboutcode-org/scancode-toolkit.git@405aaa4b3 '
               'See SPDX specification "Package Download Location" '
               'at https://spdx.org/spdx-specification-21-web-version#h.49x2ik5 ')
 

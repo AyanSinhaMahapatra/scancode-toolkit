@@ -8,9 +8,9 @@ version = "32.5.0"
 description = "A packaging of the ScanCode licensedb license and license rules pre-built index. Can only be used with ScanCode-Toolkit."
 long_description_content_type = "text/x-rst"
 readme = "src/licensedcode/data/README.rst"
-license = { text = "Apache-2.0 AND CC-BY-4.0 AND LicenseRef-scancode-other-permissive AND LicenseRef-scancode-other-copyleft" }
+license = { text = "CC-BY-4.0" }
 authors = [
-    { name = "nexB. Inc. and others", email = "info@aboutcode.org" },
+    { name = "aboutcode.org, nexB. Inc. and others", email = "info@aboutcode.org" },
 ]
 keywords = [
     "open source",
@@ -27,7 +27,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/nexB/scancode-toolkit"
+Homepage = "https://github.com/aboutcode-org/scancode-toolkit"
 
 [tool.flot]
 wheel_path_prefixes_to_strip = [ "src" ]

@@ -295,7 +295,7 @@
         {
           "type": "string", 
           "title": "VCS Repository URL", 
-          "description": "a URL to the VCS repository in the SPDX form of:git+https://github.com/nexb/scancode-toolkit.git"
+          "description": "a URL to the VCS repository in the SPDX form of:git+https://github.com/aboutcode-org/scancode-toolkit.git"
         }, 
         {
           "type": "null"
