@@ -255,6 +255,62 @@ jobs:
               venv/bin/scancode -clipeu --json-pp - some.file ; \
             done
 
+  smoke_test_install_and_run_pypi_wheels_on_linux_arm:
+    permissions:
+      contents: read # to fetch code (actions/checkout)
+
+    name: Test PyPI wheels on linux
+    needs:
+      - build_scancode_wheels_sdist_for_pypi
+    runs-on: ${{ matrix.os }}
+
+    defaults:
+      run:
+        shell: bash
+
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-24.04-arm]
+        pyver: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+
+      - name: Set up Python ${{ matrix.pyver }} on ${{ matrix.os }}
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: ${{ matrix.pyver }}
+
+      - name: Install system dependencies
+        run: |
+          sudo apt update
+          sudo apt install p7zip-full libarchive-dev libmagic1 libmagic-dev
+
+      - name: Download wheels artifact
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131
+        with:
+          name: wheels_sdist
+          path: dist
+
+      - name: install and test wheels
+        run: |
+          echo "license: gpl-2.0" > some.file
+          rm -rf venv;  \
+          python -m venv venv
+          venv/bin/python -m pip install --upgrade pip wheel setuptools
+          for f in `find dist -type f -name "licensedcode*.whl"`; \
+            do \
+              venv/bin/python -m pip install --force-reinstall "$f" ; \
+            done
+          for f in `find dist -type f -name "scancode_toolkit_mini*.whl"`; \
+            do \
+              venv/bin/python -m pip install --force-reinstall "$f[full]" ; \
+              venv/bin/scancode -clipeu --json-pp - some.file ; \
+            done
+
   smoke_test_install_and_run_pypi_wheels_on_macos:
     permissions:
       contents: read # to fetch code (actions/checkout)
@@ -378,7 +434,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-22.04, ubuntu-24.04]
+        os: [ubuntu-22.04, ubuntu-24.04, ubuntu-24.04-arm]
         pyver: ["3.10", "3.11", "3.12", "3.13", "3.14"]
 
     steps:
@@ -647,6 +703,7 @@ jobs:
       - smoke_test_install_and_run_pypi_wheels_on_windows
       - smoke_test_install_and_run_pypi_wheels_on_macos
       - smoke_test_install_and_run_pypi_wheels_on_linux
+      - smoke_test_install_and_run_pypi_wheels_on_linux_arm
       - publish_to_gh_release
     runs-on: ubuntu-24.04
     environment: pypi-publish
