@@ -367,7 +367,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [macos-14, macos-15]
+        os: [macos-15, macos-26]
         pyver: ["3.10", "3.11", "3.12", "3.13", "3.14"]
 
     steps:
@@ -513,10 +513,10 @@ jobs:
     permissions:
       contents: read # to fetch code (actions/checkout)
 
-    name: Test app on ${{ matrix.os }}
+    name: Test app on ubuntu-24.04-arm
     needs:
       - build_scancode_for_release_linux_arm
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-24.04-arm
 
     defaults:
       run:
@@ -525,7 +525,6 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-24.04-arm]
         pyver: ["3.10", "3.11", "3.12", "3.13", "3.14"]
 
     steps:
@@ -533,7 +532,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Set up Python ${{ matrix.pyver }} on ${{ matrix.os }}
+      - name: Set up Python ${{ matrix.pyver }} on ubuntu-24.04-arm
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: ${{ matrix.pyver }}
@@ -576,7 +575,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [macos-14, macos-15]
+        os: [macos-15, macos-26]
         pyver: ["3.10", "3.11", "3.12", "3.13", "3.14"]
 
     steps:
